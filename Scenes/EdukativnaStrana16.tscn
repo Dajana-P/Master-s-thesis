@@ -1,0 +1,230 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8imcrdf5mqdf"]
+
+[ext_resource type="Script" uid="uid://de11kq776lj8h" path="res://Scripts/EdukativnaStrana16.gd" id="1_dh604"]
+
+[node name="EdukativnaStrana16" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dh604")
+
+[node name="Ocena" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.76400006
+anchor_right = 0.5
+anchor_bottom = 0.76400006
+offset_left = -201.0
+offset_top = -16.072052
+offset_right = 201.0
+offset_bottom = 15.927948
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 6
+max_value = 10.0
+rounded = true
+allow_greater = true
+allow_lesser = true
+tick_count = 1
+ticks_on_borders = true
+ticks_position = 1
+
+[node name="DugmeDalje" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.85300004
+anchor_right = 0.5
+anchor_bottom = 0.85300004
+offset_left = -69.5
+offset_top = -17.744019
+offset_right = 69.5
+offset_bottom = 18.255981
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 6
+text = "Dalje"
+
+[node name="Naslov" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.095000006
+anchor_right = 0.5
+anchor_bottom = 0.095000006
+offset_left = -127.0
+offset_top = -11.560005
+offset_right = 129.0
+offset_bottom = 11.439995
+grow_horizontal = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 30
+text = "16/17"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OcenaBroj" type="Label" parent="."]
+layout_mode = 0
+offset_left = 790.0
+offset_top = 483.0
+offset_right = 830.0
+offset_bottom = 507.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.6929012
+anchor_right = 0.5
+anchor_bottom = 0.6929012
+offset_left = -49.0
+offset_top = -11.5
+offset_right = 49.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Ocena:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Polje11" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -170.0
+offset_right = -76.0
+offset_bottom = -106.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Polje21" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -79.0
+offset_right = -76.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Polje31" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = 9.0
+offset_right = -76.0
+offset_bottom = 73.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Polje12" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.0
+offset_top = -170.0
+offset_right = 31.0
+offset_bottom = -106.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Polje22" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.0
+offset_top = -79.0
+offset_right = 31.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Polje32" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.0
+offset_top = 9.0
+offset_right = 31.0
+offset_bottom = 73.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Polje13" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 71.0
+offset_top = -170.0
+offset_right = 135.0
+offset_bottom = -106.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Polje23" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 71.0
+offset_top = -79.0
+offset_right = 135.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Polje33" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 71.0
+offset_top = 9.0
+offset_right = 135.0
+offset_bottom = 73.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Reset" type="Button" parent="."]
+layout_mode = 0
+offset_left = 809.0
+offset_top = 261.0
+offset_right = 899.0
+offset_bottom = 294.0
+text = "Reset"
+
+[connection signal="value_changed" from="Ocena" to="." method="_on_ocena_value_changed"]
+[connection signal="pressed" from="DugmeDalje" to="." method="_on_dugme_dalje_pressed"]

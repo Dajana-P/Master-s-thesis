@@ -1,0 +1,233 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctmyh4qbiedcr"]
+
+[ext_resource type="Script" uid="uid://cyrqlw4yfffhs" path="res://Scripts/EdukativnaStrana13.gd" id="1_v005d"]
+[ext_resource type="AudioStream" uid="uid://bvbfdtedl2wgv" path="res://Sounds/cinematic-fairy-tale-story-main-8697.mp3" id="2_18c6i"]
+[ext_resource type="Texture2D" uid="uid://dghrp5vbix4cs" path="res://Images/mountain-7195958_640.jpg" id="3_55mnf"]
+
+[node name="EdukativnaStrana13" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v005d")
+
+[node name="Ocena" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.76400006
+anchor_right = 0.5
+anchor_bottom = 0.76400006
+offset_left = -201.0
+offset_top = -16.072052
+offset_right = 201.0
+offset_bottom = 15.927948
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 6
+max_value = 10.0
+rounded = true
+allow_greater = true
+allow_lesser = true
+tick_count = 1
+ticks_on_borders = true
+ticks_position = 1
+
+[node name="DugmeDalje" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.85300004
+anchor_right = 0.5
+anchor_bottom = 0.85300004
+offset_left = -69.5
+offset_top = -17.744019
+offset_right = 69.5
+offset_bottom = 18.255981
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 6
+text = "Dalje"
+
+[node name="Naslov" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.095000006
+anchor_right = 0.5
+anchor_bottom = 0.095000006
+offset_left = -127.0
+offset_top = -11.560005
+offset_right = 129.0
+offset_bottom = 11.439995
+grow_horizontal = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 30
+text = "13/17"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OcenaBroj" type="Label" parent="."]
+layout_mode = 0
+offset_left = 790.0
+offset_top = 483.0
+offset_right = 830.0
+offset_bottom = 507.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.6929012
+anchor_right = 0.5
+anchor_bottom = 0.6929012
+offset_left = -49.0
+offset_top = -11.5
+offset_right = 49.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Ocena:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_18c6i")
+parameters/looping = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 126.0
+offset_right = 757.0
+offset_bottom = 424.0
+color = Color(0, 0, 0, 0.3764706)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.33100003
+anchor_right = 0.5
+anchor_bottom = 0.33100003
+offset_left = -328.0
+offset_top = -80.48802
+offset_right = 92.0
+offset_bottom = 339.51196
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(320, 0)
+texture = ExtResource("3_55mnf")
+expand_mode = 1
+
+[node name="PlayPause" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.565
+anchor_top = 0.289
+anchor_right = 0.565
+anchor_bottom = 0.289
+offset_left = 33.119995
+offset_top = 182.728
+offset_right = 80.119995
+offset_bottom = 213.728
+grow_horizontal = 2
+grow_vertical = 2
+text = "▶❚❚"
+
+[node name="Replay" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.565
+anchor_top = 0.377
+anchor_right = 0.565
+anchor_bottom = 0.377
+offset_left = -21.880005
+offset_top = 125.703995
+offset_right = 25.119995
+offset_bottom = 156.704
+grow_horizontal = 2
+grow_vertical = 2
+text = "⟳"
+
+[node name="Mute" type="CheckButton" parent="."]
+layout_mode = 0
+offset_left = 682.0
+offset_top = 325.0
+offset_right = 726.0
+offset_bottom = 349.0
+
+[node name="Volume" type="VSlider" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 119.0
+offset_top = -157.0
+offset_right = 135.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -167.0
+offset_top = 27.0
+offset_right = 38.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 12
+text = "Now Playing:
+Cinematic Fairy Tale Story (Main)
+By: Good_B_Music"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 95.0
+offset_top = -181.0
+offset_right = 159.0
+offset_bottom = -158.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 12
+text = "Volume:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 95.0
+offset_top = -19.0
+offset_right = 159.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 12
+text = "Mute:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="value_changed" from="Ocena" to="." method="_on_ocena_value_changed"]
+[connection signal="pressed" from="DugmeDalje" to="." method="_on_dugme_dalje_pressed"]

@@ -1,0 +1,179 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcdljxkj1gmta"]
+
+[ext_resource type="Script" uid="uid://c5yu3ldy0yey6" path="res://Scripts/EdukativnaStrana15.gd" id="1_vctk5"]
+
+[node name="EdukativnaStrana15" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vctk5")
+
+[node name="Ocena" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.76400006
+anchor_right = 0.5
+anchor_bottom = 0.76400006
+offset_left = -201.0
+offset_top = -16.072052
+offset_right = 201.0
+offset_bottom = 15.927948
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 6
+max_value = 10.0
+rounded = true
+allow_greater = true
+allow_lesser = true
+tick_count = 1
+ticks_on_borders = true
+ticks_position = 1
+
+[node name="DugmeDalje" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.85300004
+anchor_right = 0.5
+anchor_bottom = 0.85300004
+offset_left = -69.5
+offset_top = -17.744019
+offset_right = 69.5
+offset_bottom = 18.255981
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 6
+text = "Dalje"
+
+[node name="Sadrzaj" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.316
+anchor_right = 0.5
+anchor_bottom = 0.316
+offset_left = -427.0
+offset_top = -70.768005
+offset_right = 427.0
+offset_bottom = 71.231995
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 18
+text = "U SQL-u (Structured Query Language) koristimo posebne naredbe da bismo radili sa podacima u bazama.
+Jedna od najosnovnijih operacija je izvlačenje podataka iz tabele — recimo, ako imamo tabelu pod nazivom Korisnici i želimo da prikažemo sve redove i kolone iz te tabele.
+Koja SQL naredba se koristi za to?"
+
+[node name="Naslov" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.095000006
+anchor_right = 0.5
+anchor_bottom = 0.095000006
+offset_left = -127.0
+offset_top = -11.560005
+offset_right = 129.0
+offset_bottom = 11.439995
+grow_horizontal = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 30
+text = "15/17"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OcenaBroj" type="Label" parent="."]
+layout_mode = 0
+offset_left = 790.0
+offset_top = 483.0
+offset_right = 830.0
+offset_bottom = 507.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.6929012
+anchor_right = 0.5
+anchor_bottom = 0.6929012
+offset_left = -49.0
+offset_top = -11.5
+offset_right = 49.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Ocena:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Odgovor1" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -418.0
+offset_top = -16.0
+offset_right = -258.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 12
+text = "DISPLAY * FROM Korisnici"
+
+[node name="Odgovor2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 47.0
+offset_top = -16.0
+offset_right = 207.0
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 12
+text = "SELECT * FROM Korisnici"
+
+[node name="Odgovor3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = -16.0
+offset_right = -32.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 12
+text = "SHOW TABLE Korisnici"
+
+[node name="Odgovor4" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 267.0
+offset_top = -16.0
+offset_right = 427.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 12
+text = "GET * FROM Korisnici"
+
+[connection signal="value_changed" from="Ocena" to="." method="_on_ocena_value_changed"]
+[connection signal="pressed" from="DugmeDalje" to="." method="_on_dugme_dalje_pressed"]

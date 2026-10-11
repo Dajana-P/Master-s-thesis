@@ -1,0 +1,184 @@
+[gd_scene load_steps=8 format=3 uid="uid://ccvludshjbxpv"]
+
+[ext_resource type="Script" uid="uid://62sw3psgeu5k" path="res://Scripts/EdukativnaStrana17.gd" id="1_bjt47"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0bq16"]
+bounce = 0.5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bjt47"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjt47"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2b56f"]
+bounce = 5.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjt47"]
+size = Vector2(1152, 9)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0bq16"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="EdukativnaStrana17" type="Node2D"]
+script = ExtResource("1_bjt47")
+
+[node name="Ocena" type="HSlider" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.76400006
+anchor_right = 0.5
+anchor_bottom = 0.76400006
+offset_left = 375.0
+offset_top = 479.0
+offset_right = 777.0
+offset_bottom = 511.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 6
+max_value = 10.0
+rounded = true
+allow_greater = true
+allow_lesser = true
+tick_count = 1
+ticks_on_borders = true
+ticks_position = 1
+
+[node name="DugmeDalje" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.85300004
+anchor_right = 0.5
+anchor_bottom = 0.85300004
+offset_left = 506.5
+offset_top = 535.0
+offset_right = 645.5
+offset_bottom = 571.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 6
+text = "Dalje"
+
+[node name="Naslov" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.095000006
+anchor_right = 0.5
+anchor_bottom = 0.095000006
+offset_left = 449.0
+offset_top = 50.0
+offset_right = 705.0
+offset_bottom = 92.0
+grow_horizontal = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 30
+text = "17/17"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OcenaBroj" type="Label" parent="."]
+offset_left = 790.0
+offset_top = 483.0
+offset_right = 830.0
+offset_bottom = 507.0
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.6929012
+anchor_right = 0.5
+anchor_bottom = 0.6929012
+offset_left = 527.0
+offset_top = 437.49997
+offset_right = 625.0
+offset_bottom = 460.49997
+grow_horizontal = 2
+grow_vertical = 2
+text = "Ocena:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Lopta" type="RigidBody2D" parent="."]
+position = Vector2(576, -20)
+collision_layer = 15
+collision_mask = 15
+mass = 0.5
+physics_material_override = SubResource("PhysicsMaterial_0bq16")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lopta"]
+shape = SubResource("CircleShape2D_bjt47")
+
+[node name="Panel" type="Panel" parent="Lopta"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bjt47")
+metadata/_edit_use_anchors_ = true
+
+[node name="Tlo" type="StaticBody2D" parent="."]
+position = Vector2(576, 372)
+collision_layer = 7
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_2b56f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tlo"]
+shape = SubResource("RectangleShape2D_bjt47")
+
+[node name="Panel" type="Panel" parent="Tlo"]
+offset_left = -576.0
+offset_top = -4.0
+offset_right = 576.0
+offset_bottom = 5.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0bq16")
+
+[node name="DesniZid" type="StaticBody2D" parent="."]
+position = Vector2(1156, 72)
+collision_layer = 7
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_2b56f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DesniZid"]
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_bjt47")
+
+[node name="Panel" type="Panel" parent="DesniZid"]
+offset_left = 5.0
+offset_top = -576.0
+offset_right = 1157.0
+offset_bottom = -567.0
+rotation = 1.5707964
+theme_override_styles/panel = SubResource("StyleBoxFlat_0bq16")
+metadata/_edit_use_anchors_ = true
+
+[node name="LeviZid" type="StaticBody2D" parent="."]
+position = Vector2(-4, 72)
+collision_layer = 7
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_2b56f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeviZid"]
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_bjt47")
+
+[node name="Panel" type="Panel" parent="LeviZid"]
+offset_left = 4.0
+offset_top = -576.0
+offset_right = 1156.0
+offset_bottom = -567.0
+rotation = 1.5707964
+theme_override_styles/panel = SubResource("StyleBoxFlat_0bq16")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="value_changed" from="Ocena" to="." method="_on_ocena_value_changed"]

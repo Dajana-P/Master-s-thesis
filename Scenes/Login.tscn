@@ -1,0 +1,82 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6t0wrmurts00"]
+
+[ext_resource type="Script" uid="uid://degvq31i8np58" path="res://Scripts/Login.gd" id="1_leum0"]
+
+[node name="Login" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_leum0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Naslov" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "ANKETA - APLIKACIJA"
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+text = "U ovoj ankteti ćete ocenjivati različite interaktivne elemente kroz ukupno 17 stranica sa ocenom od 0 do 10."
+horizontal_alignment = 1
+
+[node name="EmailPolje" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+placeholder_text = "primer.email@primer.com"
+
+[node name="UpozorenjeEmail" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="LozinkaPolje" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+placeholder_text = "lozinka"
+secret = true
+
+[node name="UpozorenjeLozinka" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="PrijavaDugme" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Prijavi se"
+
+[node name="RegistrujSeDugme" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Nemas nalog? Registruj se!"
+
+[node name="Izadji" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.96900004
+anchor_top = 0.022000002
+anchor_right = 0.96900004
+anchor_bottom = 0.022000002
+offset_left = -36.288086
+offset_top = -14.256001
+offset_right = 35.711914
+offset_bottom = 13.743999
+grow_horizontal = 2
+grow_vertical = 2
+text = "Izadji"
+
+[connection signal="pressed" from="VBoxContainer/PrijavaDugme" to="." method="_on_prijava_dugme_pressed"]
+[connection signal="pressed" from="VBoxContainer/RegistrujSeDugme" to="." method="_on_registruj_se_dugme_pressed"]
+[connection signal="pressed" from="Izadji" to="." method="_on_izadji_pressed"]

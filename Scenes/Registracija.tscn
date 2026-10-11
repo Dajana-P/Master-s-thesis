@@ -1,0 +1,73 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbawudcwjxh64"]
+
+[ext_resource type="Script" uid="uid://bwqrhqluy45jn" path="res://Scripts/Registracija.gd" id="1_rnu5w"]
+
+[node name="Registracija" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rnu5w")
+metadata/_edit_horizontal_guides_ = [-73.0]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Naslov" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "REGISTRACIJA"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="EmailPolje" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+placeholder_text = "primer.email@primer.com"
+
+[node name="UpozorenjeEmail" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="LozinkaPolje" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+placeholder_text = "Lozinka"
+secret = true
+
+[node name="LozinkaPotvrdaPolje" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+placeholder_text = "Potvrda lozinke"
+secret = true
+
+[node name="UpozorenjeLozinka" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="RegistrujSeDugme" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Registruj se"
+
+[node name="PrijaviSeDugme" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Vec imas nalog? Prijavi se!"
+
+[connection signal="pressed" from="VBoxContainer/RegistrujSeDugme" to="." method="_on_registruj_se_dugme_pressed"]
+[connection signal="pressed" from="VBoxContainer/PrijaviSeDugme" to="." method="_on_prijavi_se_dugme_pressed"]

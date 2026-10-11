@@ -1,0 +1,157 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnb7cg4kwbewh"]
+
+[ext_resource type="Script" uid="uid://1ce2n60picpy" path="res://Scripts/EdukativnaStrana7.gd" id="1_j1jns"]
+
+[node name="EdukativnaStrana7" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j1jns")
+
+[node name="Ocena" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.76400006
+anchor_right = 0.5
+anchor_bottom = 0.76400006
+offset_left = -201.0
+offset_top = -16.072052
+offset_right = 201.0
+offset_bottom = 15.927948
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 6
+max_value = 10.0
+rounded = true
+allow_greater = true
+allow_lesser = true
+tick_count = 1
+ticks_on_borders = true
+ticks_position = 1
+
+[node name="DugmeDalje" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.85300004
+anchor_right = 0.5
+anchor_bottom = 0.85300004
+offset_left = -69.5
+offset_top = -17.744019
+offset_right = 69.5
+offset_bottom = 18.255981
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 6
+text = "Dalje"
+
+[node name="Naslov" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.095000006
+anchor_right = 0.5
+anchor_bottom = 0.095000006
+offset_left = -127.0
+offset_top = -11.560005
+offset_right = 129.0
+offset_bottom = 11.439995
+grow_horizontal = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 30
+text = "7/17"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OcenaBroj" type="Label" parent="."]
+layout_mode = 0
+offset_left = 790.0
+offset_top = 483.0
+offset_right = 830.0
+offset_bottom = 507.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.6929012
+anchor_right = 0.5
+anchor_bottom = 0.6929012
+offset_left = -49.0
+offset_top = -11.5
+offset_right = 49.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Ocena:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.583
+anchor_right = 0.5
+anchor_bottom = 0.583
+offset_left = -86.0
+offset_top = -15.783997
+offset_right = 86.0
+offset_bottom = 15.216003
+grow_horizontal = 2
+grow_vertical = 2
+text = "Klikni"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.31
+anchor_right = 0.5
+anchor_bottom = 0.31
+offset_left = -80.0
+offset_top = -11.380005
+offset_right = 80.0
+offset_bottom = 11.619995
+grow_horizontal = 2
+grow_vertical = 2
+text = "Boja:"
+horizontal_alignment = 1
+
+[node name="Boja" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.38000003
+anchor_right = 0.5
+anchor_bottom = 0.38000003
+offset_left = -63.0
+offset_top = -11.740021
+offset_right = 63.0
+offset_bottom = 11.259979
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.483
+anchor_right = 0.5
+anchor_bottom = 0.483
+offset_left = -194.0
+offset_top = -27.984009
+offset_right = 194.0
+offset_bottom = 28.015991
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="value_changed" from="Ocena" to="." method="_on_ocena_value_changed"]
+[connection signal="pressed" from="DugmeDalje" to="." method="_on_dugme_dalje_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
