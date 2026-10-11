@@ -1,0 +1,2 @@
+Master’s Thesis focused on the development and evaluation of an interactive software application to investigate the relationship between interactivity and user motivation. 
+The research involved designing and implementing interactive elements using Godot Engine, integrating a Firestore database for data collection, and analysing user feedback through quantitative methods and data visualisation in Microsoft Excel.
